@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html data-ng-app="rraven">
+  <head>
+    <title>Reactive Raven's Repo Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <style>
+      
+      .header-image
+      {
+        width: 100%;
+      }
+      
+      #mainview
+      {
+        margin-top: 40px;
+      }
+      
+      @media (min-width: 1024px) {
+        .header-image
+        {
+          width: 800px;
+          margin: auto;
+          display: block;
+        }
+        body
+        {
+          padding: 0 50px;
+        }
+      }
+      
+      @media (max-width: 979px) {
+        #mainview
+        {
+          margin-top: 0;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .navbar-fixed-top
+        {
+          margin-bottom: 20px;
+        }
+      }
+      
+      .repolist .published
+      {
+        display: block;
+        color: black;
+      }
+      
+      .repolist a
+      {
+        text-decoration: none;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <!-- Be sure to leave the brand out there if you want it shown -->
+          <a class="brand" href="#" title="Reactive Raven's Repo Report">R.R.R.R.</a>
+
+          <!-- Everything you want hidden at 940px or less, place within here -->
+          <div class="nav-collapse collapse">
+            <ul class="nav" data-ng-controller="MenuCtrl">
+              <li><a href="#/" data-active-link="active">Home</a></li>
+              <li class="dropdown">
+                <a href=""#" class=""dropdown-toggle" data-toggle="dropdown">
+                   Featured Posts
+                </a>
+                <ul class="dropdown-menu">
+                  <li data-ng-repeat="post in posts | filter:{featured: true} | orderBy:'published'" >
+                    <a data-ng-href="#/posts/{{post.id}}" data-active-link="active">{{post.title}}</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#/about" data-active-link="active">About</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="mainview">
+      <div class="container" data-ng-view>
+        
+      </div>
+    </div>
+    
+    <!-- scripts at the end to avoid blocking -->
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/marked/marked.js"></script>
+    <script src="js/angular-1.0.6/angular.js"></script>
+    <script src="js/angular-1.0.6/angular-resource.js"></script>
+    <script src="js/app/controllers.js"></script>
+    <script src="js/app/services.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
