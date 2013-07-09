@@ -1,5 +1,21 @@
 function IndexCtrl($scope, Post) {
   $scope.posts = Post.query();
+  
+  $scope.isPostPublished = function (post) {
+    
+    var now = moment().format("YYYY-MM-DD HH:mm:ss");
+    
+    return (
+      post.published 
+      && post.published < now 
+      && (
+        !post.unpublished 
+        || post.unpublished > now
+      )
+    );
+    
+  }
+  
 }
 IndexCtrl.$inject = ['$scope', 'Post'];
 
@@ -23,4 +39,19 @@ PostCtrl.$inject = ['$scope', '$routeParams', '$http', 'Post'];
 
 function MenuCtrl($scope, Post) {
   $scope.posts = Post.query();
+  
+  $scope.isPostPublished = function (post) {
+    
+    var now = moment().format("YYYY-MM-DD HH:mm:ss");
+    
+    return (
+      post.published 
+      && post.published < now 
+      && (
+        !post.unpublished 
+        || post.unpublished > now
+      )
+    );
+    
+  }
 }

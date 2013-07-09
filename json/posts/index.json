@@ -4,11 +4,20 @@
     "id": "hello-world",
     "featured": true,
     "image": "/img/hello-world.jpg",
-    "published": "2013-04-26 16:53:00"
+    "published": "2013-04-26 16:53:00",
+    "unpublished": "2013-07-09 15:35:00"
   },
   {
     "title": "Hello Croydon!",
     "id": "hello-croydon",
-    "published": "2013-04-26 17:31"
+    "published": "2013-04-26 17:31:00",
+    "unpublished": "2013-07-09 15:35:00"
+  },
+  {
+    "title": "AngularJS Automated Testing",
+    "id": "angularjs-automated-testing",
+    "featured": true,
+    "published": "2050-07-10 15:30:00",
+    "local-published": "2013-07-09 15:30:00"
   }
 ]

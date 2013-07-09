@@ -3,7 +3,7 @@
   Here's a little place for me to post web-dev blogs, and highlight useful Repos I've found.
 </p>
 <ul class="repolist">
-  <li data-ng-repeat="post in posts | filter:{published: ' '} | orderBy:'published'">
+  <li data-ng-repeat="post in posts | filter:isPostPublished | orderBy:'published'">
     <a data-ng-href="#/posts/{{post.id}}">
       <span class="title">{{post.title}}</span>
       <span class="published">Published {{post.published | fromNow}}</span>
