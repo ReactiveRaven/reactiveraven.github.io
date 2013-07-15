@@ -1,20 +1,32 @@
 angular.module('rravenServices', ['ngResource']).
   factory(
-    'Phone', 
-    function($resource){
-      return $resource(
-        'phones/:phoneId.json', 
-        {}, 
-        {
-          query: {
-            method:'GET', 
-            params:{
-              phoneId:'phones'
-            }, 
-            isArray:true
-          }
+    "TimeHelper",
+    function () {
+      var result = {};
+      
+      result.isPublished = function (object) {
+        var now = moment().format("YYYY-MM-DD HH:mm:ss");
+    
+        var published = object.published;
+        var unpublished = object.unpublished;
+
+        if (window.location.hostname !== "reactiveraven.github.io") {
+          published = (object.localPublished ? object.localPublished : published);
+          unpublished = (object.localUnpublished ? object.localUnpublished : unpublished);
         }
-      );
+
+        return (
+          published
+          && published < now 
+          && (
+            !unpublished 
+            || unpublished > now
+          )
+        );
+      }
+      
+      
+      return result;
     }
   ).
   factory(

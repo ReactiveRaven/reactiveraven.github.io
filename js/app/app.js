@@ -41,8 +41,8 @@ angular.module('rraven', ['rravenServices']).
           controller: PostCtrl
         }).
         when('/about', {
-          templateUrl: 'templates/about.html', 
-          controller: IndexCtrl
+          templateUrl: 'templates/about.html',
+          controller: AboutCtrl
         }).
         otherwise({
           redirectTo: '/'

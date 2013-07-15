@@ -1,23 +1,10 @@
-function IndexCtrl($scope, Post) {
+function IndexCtrl($scope, Post, TimeHelper) {
   $scope.posts = Post.query();
   
-  $scope.isPostPublished = function (post) {
-    
-    var now = moment().format("YYYY-MM-DD HH:mm:ss");
-    
-    return (
-      post.published 
-      && post.published < now 
-      && (
-        !post.unpublished 
-        || post.unpublished > now
-      )
-    );
-    
-  }
+  $scope.isPostPublished = TimeHelper.isPublished;
   
 }
-IndexCtrl.$inject = ['$scope', 'Post'];
+IndexCtrl.$inject = ['$scope', 'Post', 'TimeHelper'];
 
 
 function PostCtrl($scope, $routeParams, $http, Post) {
@@ -37,21 +24,18 @@ function PostCtrl($scope, $routeParams, $http, Post) {
 }
 PostCtrl.$inject = ['$scope', '$routeParams', '$http', 'Post'];
 
-function MenuCtrl($scope, Post) {
+function AboutCtrl($scope, $routeParams, $http) {
+  
+  $http.get("/json/about/index.md").success(function (data) {
+    $scope.body = data;
+  });
+}
+AboutCtrl.$inject = ['$scope', '$routeParams', '$http'];
+
+function MenuCtrl($scope, Post, TimeHelper) {
+  
   $scope.posts = Post.query();
   
-  $scope.isPostPublished = function (post) {
-    
-    var now = moment().format("YYYY-MM-DD HH:mm:ss");
-    
-    return (
-      post.published 
-      && post.published < now 
-      && (
-        !post.unpublished 
-        || post.unpublished > now
-      )
-    );
-    
-  }
+  $scope.isPostPublished = TimeHelper.isPublished;
+  
 }

@@ -18,6 +18,14 @@
         margin-top: 40px;
       }
       
+      
+      .brand img
+      {
+        margin-top: -5px;
+        margin-bottom: -5px;
+        vertical-align: top;
+      }
+      
       @media (min-width: 1024px) {
         .header-image
         {
@@ -71,14 +79,14 @@
           </a>
 
           <!-- Be sure to leave the brand out there if you want it shown -->
-          <a class="brand" href="#" title="Reactive Raven's Repo Report">R.R.R.R.</a>
+          <a class="brand" href="#" title="Reactive Raven"><img src="/img/rrlogo_tiny.png" alt="Reactive Raven logo" /> RR</a>
 
           <!-- Everything you want hidden at 940px or less, place within here -->
           <div class="nav-collapse collapse">
             <ul class="nav" data-ng-controller="MenuCtrl">
               <li><a href="#/" data-active-link="active">Home</a></li>
               <li class="dropdown">
-                <a href=""#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                    Featured Posts
                 </a>
                 <ul class="dropdown-menu">
