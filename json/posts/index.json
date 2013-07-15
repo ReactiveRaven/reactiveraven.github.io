@@ -19,5 +19,19 @@
     "featured": true,
     "published": "2050-07-10 15:30:00",
     "localPublished": "2013-07-09 15:30:00"
+  },
+  {
+    "title": "Get out of your comfort zone",
+    "id": "get-out-of-your-comfort-zone",
+    "featured": true,
+    "published": "2013-10-01 01:00:00",
+    "localPublished": "2013-07-09 15:30:00"
+  },
+  {
+    "title": "The Importance of Speed",
+    "id": "the-importance-of-speed",
+    "featured": true,
+    "published": "2013-10-01 01:00:00",
+    "localPublished": "2013-07-09 15:30:00"
   }
 ]

@@ -1,4 +1,13 @@
 <img class="header-image" data-ng-src="{{post.image}}" />
-<h1>{{post.title}}</h1>
-<markdown data-ng-model="body">
-</markdown>
+<div class="row-fluid">
+  <div class="span3 authorcolumn" data-ng-show="author">
+    <img class="usericon" src="{{author.icon}}" alt="{{author.name}} Icon" />
+    <h2>{{author.name}}</h2>
+  </div>
+  
+  <div class="span9 postcolumn">
+    <h1>{{post.title}}</h1>
+    <markdown data-ng-model="body">
+    </markdown>
+  </div>
+</div>

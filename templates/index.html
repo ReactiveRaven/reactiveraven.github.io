@@ -1,9 +1,9 @@
 <h1>Recent Posts</h1>
 <ul class="repolist">
-  <li data-ng-repeat="post in posts | filter:isPostPublished | orderBy:'published'">
+  <li data-ng-repeat="post in posts | filter:isPostPublished | orderBy:'published':true">
     <a data-ng-href="#/posts/{{post.id}}">
       <span class="title">{{post.title}}</span>
-      <span class="published">Published {{post.published | fromNow}}</span>
+      <span class="published">Published <abbr title="{{post.published}}">{{post.published | fromNow}}</abbr></span>
     </a>
   </li>
 </ul>

@@ -7,7 +7,7 @@ function IndexCtrl($scope, Post, TimeHelper) {
 IndexCtrl.$inject = ['$scope', 'Post', 'TimeHelper'];
 
 
-function PostCtrl($scope, $routeParams, $http, Post) {
+function PostCtrl($scope, $routeParams, $http, Post, Author) {
   $scope.posts = Post.query({},function (data) {
     var i = null;
     for (i in data) {
@@ -15,6 +15,12 @@ function PostCtrl($scope, $routeParams, $http, Post) {
         $scope.post = data[i];
       }
     }
+    
+    if ($scope.post.author === undefined) {
+      $scope.post.author = "reactiveraven";
+    }
+    
+    $scope.author = Author.get({id: $scope.post.author});
   });
   
   //$scope.post = Post.get({id: $routeParams.id});
@@ -22,7 +28,7 @@ function PostCtrl($scope, $routeParams, $http, Post) {
     $scope.body = data;
   });
 }
-PostCtrl.$inject = ['$scope', '$routeParams', '$http', 'Post'];
+PostCtrl.$inject = ['$scope', '$routeParams', '$http', 'Post', 'Author'];
 
 function AboutCtrl($scope, $routeParams, $http) {
   

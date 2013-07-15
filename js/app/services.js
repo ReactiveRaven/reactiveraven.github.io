@@ -47,6 +47,24 @@ angular.module('rravenServices', ['ngResource']).
       );
     }
   ).
+  factory(
+    'Author', 
+    function($resource){
+      return $resource(
+        'json/authors/:id.json', 
+        {}, 
+        {
+          query: {
+            method:'GET', 
+            params:{
+              id:'index'
+            }, 
+            isArray:true
+          }
+        }
+      );
+    }
+  ).
   filter('fromNow', function() {
     return function(dateString) {
       return moment(new Date(dateString)).fromNow()

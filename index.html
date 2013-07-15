@@ -2,10 +2,14 @@
 <html data-ng-app="rraven">
   <head>
     <title>Reactive Raven's Repo Report</title>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css" />
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    
     <style>
       
       .header-image
@@ -24,6 +28,29 @@
         margin-top: -5px;
         margin-bottom: -5px;
         vertical-align: top;
+      }
+      
+      .authorcolumn .usericon
+      {
+        border-radius: 1000px;
+      }
+      
+      .authorcolumn,
+      .postcolumn
+      {
+        padding-top: 40px;
+      }
+
+      .authorcolumn .usericon
+      {
+        max-width: 75%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .authorcolumn h2
+      {
+        text-align: center;
       }
       
       @media (min-width: 1024px) {
@@ -90,7 +117,7 @@
                    Featured Posts
                 </a>
                 <ul class="dropdown-menu">
-                  <li data-ng-repeat="post in posts | filter:{featured: true} | filter:isPostPublished | orderBy:'published'" >
+                  <li data-ng-repeat="post in posts | filter:{featured: true} | filter:isPostPublished | orderBy:'published':true" >
                     <a data-ng-href="#/posts/{{post.id}}" data-active-link="active">{{post.title}}</a>
                   </li>
                 </ul>
