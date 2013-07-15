@@ -8,6 +8,7 @@
     
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
     
     <style>
@@ -38,19 +39,53 @@
       .authorcolumn,
       .postcolumn
       {
-        padding-top: 40px;
+          padding-top: 40px;
       }
 
       .authorcolumn .usericon
       {
-        max-width: 75%;
-        margin: 0 auto;
-        display: block;
+          max-width: 75%;
+          margin: 0 auto;
+          display: block;
       }
 
       .authorcolumn h2
       {
-        text-align: center;
+          text-align: center;
+      }
+
+      .authorcolumn .accounts .icon
+      {
+          vertical-align: middle;
+          display: inline-block;
+      }
+      
+      .authorcolumn .accounts,
+      .authorcolumn .coderwall
+      {
+          list-style-type: none;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+      }
+
+      .authorcolumn .accounts li,
+      .authorcolumn .coderwall li
+      {
+          display: inline-block;
+      }
+
+      .authorcolumn .accounts li a,
+      .authorcolumn .coderwall li a
+      {
+          text-decoration: none;
+      }
+      
+      .authorcolumn .coderwall img
+      {
+        width: 36px;
+        height: 36px;
+        margin: 3px 3px;
       }
       
       @media (min-width: 1024px) {

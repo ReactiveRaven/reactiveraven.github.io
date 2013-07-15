@@ -20,7 +20,13 @@ function PostCtrl($scope, $routeParams, $http, Post, Author) {
       $scope.post.author = "reactiveraven";
     }
     
-    $scope.author = Author.get({id: $scope.post.author});
+    $scope.author = Author.get({id: $scope.post.author}, function (data) {
+      if (data.accounts.coderwall) {
+        $http.jsonp("https://coderwall.com/" + data.accounts.coderwall + ".json?callback=JSON_CALLBACK").success(function (data) {
+          $scope.coderwall = data.data;
+        });
+      }
+    });
   });
   
   //$scope.post = Post.get({id: $routeParams.id});

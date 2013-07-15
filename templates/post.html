@@ -3,6 +3,20 @@
   <div class="span3 authorcolumn" data-ng-show="author">
     <img class="usericon" src="{{author.icon}}" alt="{{author.name}} Icon" />
     <h2>{{author.name}}</h2>
+    <ul class="accounts">
+      <li data-ng-show="author.accounts.twitter"><a data-ng-href="http://www.twitter.com/{{author.accounts.twitter}}"><i class="icon icon-twitter-sign icon-3x"></i></a></li>
+      <li data-ng-show="author.accounts.github"><a data-ng-href="http://www.github.com/{{author.accounts.github}}"><i class="icon icon-github-sign icon-3x"></i></a></li>
+      <li data-ng-show="author.accounts.linkedin"><a data-ng-href="http://www.linkedin.com/profile/view?id={{author.accounts.linkedin}}"><i class="icon icon-linkedin-sign icon-3x"></i></a></li>
+      <!--<li data-ng-show="author.accounts.stackoverflow"><a data-ng-href="http://www.stackoverflow.com/users/{{author.accounts.stackoverflow}}"><i class="icon icon-stackexchange icon-3x"></i></a></li>-->
+      <li data-ng-show="author.accounts.youtube"><a data-ng-href="http://www.youtube.com/user/{{author.accounts.youtube}}"><i class="icon icon-youtube-sign icon-3x"></i></a></li>
+      <li data-ng-show="author.accounts.tumblr"><a data-ng-href="http://{{author.accounts.tumblr}}.tumblr.com"><i class="icon icon-tumblr-sign icon-3x"></i></a></li>
+      <li data-ng-show="author.accounts.googleplus"><a data-ng-href="https://plus.google.com/{{author.accounts.googleplus}}"><i class="icon icon-google-plus-sign icon-3x"></i></a></li>
+      <li data-ng-show="author.accounts.pinterest"><a data-ng-href="http://www.pinterest.com/{{author.accounts.pinterest}}/"><i class="icon icon-pinterest-sign icon-3x"></i></a></li>
+      <li data-ng-show="author.accounts.facebook"><a data-ng-href="http://www.facebook.com/{{author.accounts.facebook}}/"><i class="icon icon-facebook-sign icon-3x"></i></a></li>
+    </ul>
+    <ul class="coderwall" data-ng-show="coderwall">
+      <li data-ng-repeat="badge in coderwall.badges"><a data-ng-href="http://www.coderwall.com/{{author.accounts.coderwall}}"><img src="#" data-ng-src="{{badge.badge}}" title="{{badge.name}} - {{badge.description}}" alt="{{badge.name}} - {{badge.description}}" /></a></li>
+    </ul>
   </div>
   
   <div class="span9 postcolumn">
