@@ -1,3 +1,5 @@
-It sounds an innocuous phrase, but until you do you won't realise just how little you really know.
+Its such an innocuous phrase isn't it?
 
-You'll also realise just how little your heroes know too. Its a liberating feeling being able to point out the error in someone's syntax during a demo before they spot it themselves.
+But how often are you *really* out of your depth? 
+
+Unless you're a polyglot, probably only when you're working in a language you haven't mastered.

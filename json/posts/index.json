@@ -24,14 +24,22 @@
     "title": "Get out of your comfort zone",
     "id": "get-out-of-your-comfort-zone",
     "featured": true,
-    "published": "2013-10-01 01:00:00",
+    "published": "2050-01-01 01:00:00",
     "localPublished": "2013-07-09 15:30:00"
   },
   {
     "title": "The Importance of Speed",
     "id": "the-importance-of-speed",
     "featured": true,
-    "published": "2013-10-01 01:00:00",
+    "published": "2050-01-01 01:00:00",
     "localPublished": "2013-07-09 15:30:00"
+  },
+  {
+    "title": "Employee's Heirarchy of Needs",
+    "id": "employees-heirarchy-of-needs",
+    "featured": true,
+    "image": "/img/maslovs-heirarchy-of-needs.png",
+    "published": "2050-01-01 01:00:00",
+    "localPublished": "2013-07-17 10:29:00"
   }
 ]
