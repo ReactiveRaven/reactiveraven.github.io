@@ -20,7 +20,7 @@
   </div>
   
   <div class="span9 postcolumn">
-    <h1>{{post.title}}</h1>
+      <h1>{{post.title}} <small title="{{post.published}}">published {{post.published | fromNow}}</small></h1>
     <markdown data-ng-model="body">
     </markdown>
   </div>

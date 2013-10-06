@@ -41,5 +41,13 @@
     "image": "/img/maslovs-heirarchy-of-needs.png",
     "published": "2050-01-01 01:00:00",
     "localPublished": "2013-07-17 10:29:00"
+  },
+  {
+    "title": "Coding Environment",
+    "id": "coding-environment",
+    "featured": true,
+    "image": "/img/netbeans.png",
+    "published": "2013-10-06 17:30:00",
+    "localPublished": "2013-07-17 10:29:00"
   }
 ]

@@ -11,7 +11,7 @@ function PostCtrl($scope, $routeParams, $http, Post, Author) {
   $scope.posts = Post.query({},function (data) {
     var i = null;
     for (i in data) {
-      if (data[i].id == $routeParams.id) {
+      if (data[i].id === $routeParams.id) {
         $scope.post = data[i];
       }
     }
