@@ -16,6 +16,9 @@ function PostCtrl($scope, $routeParams, $http, Post, Author) {
       }
     }
     
+    disqus_identifier = "post-" + $scope.post.id;
+    disqus_title = $scope.post.title;
+    
     if ($scope.post.author === undefined) {
       $scope.post.author = "reactiveraven";
     }
