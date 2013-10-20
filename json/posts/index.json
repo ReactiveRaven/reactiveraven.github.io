@@ -56,6 +56,7 @@
     "featured": true,
     "image": "/img/music-equalizer-background.jpg",
     "published": "2013-10-13 17:30:00",
-    "localPublished": "2013-07-17 10:29:00"
+    "localPublished": "2013-07-17 10:29:00",
+    "unpublished": "2000-01-01 00:00:00"
   }
 ]
